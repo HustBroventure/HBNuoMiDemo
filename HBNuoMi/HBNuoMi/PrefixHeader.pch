@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  HBNuoMi
+//
+//  Created by wangfeng on 15/11/5.
+//  Copyright (c) 2015年 HustBroventure. All rights reserved.
+//
+
+#ifndef HBNuoMi_PrefixHeader_pch
+#define HBNuoMi_PrefixHeader_pch
+
+    //#pragma mark - -  自定义Log
+
+#ifdef DEBUG
+
+#define ECLog(...) NSLog(@"行号:%d方法名:%s\n %@\n\n",__LINE__,__func__,[NSString stringWithFormat:__VA_ARGS__])
+
+#else
+#define ECLog(...)
+
+#endif
+
+    //#pragma mark - -  全局import
+#import <UIKit/UIKit.h>
+#import "HBBaseConfig.h"
+#endif
