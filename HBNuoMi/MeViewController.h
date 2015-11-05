@@ -1,5 +1,5 @@
 //
-//  HBBaseViewController.h
+//  MeViewController.h
 //  HBNuoMi
 //
 //  Created by wangfeng on 15/11/5.
@@ -7,10 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface HBBaseViewController : UIViewController
-
-
--(void)addRightBarItemWith:(NSString*)imageName;
+@interface MeViewController : HBBaseViewController
 
 @end

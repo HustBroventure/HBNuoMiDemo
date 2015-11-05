@@ -14,24 +14,50 @@
 
 @implementation HBBaseViewController
 
-- (void)viewDidLoad {
+#pragma mark - vc-life-circle
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
 }
 
-/*
-#pragma mark - Navigation
+-(void)addRightBarItemWith:(NSString*)imageName
+{
+    UIImage* itemImage = [UIImage imageNamed:@"icon_nav_cart_normal"];
+    itemImage = [itemImage imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem* item = [[UIBarButtonItem alloc]initWithImage:itemImage style:UIBarButtonItemStylePlain target:self action:@selector(rightClick:)];
+    item.tag = 100;
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UIImage* itemImage2 = [UIImage imageNamed:imageName];
+    itemImage2 = [itemImage2 imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem* item2 = [[UIBarButtonItem alloc]initWithImage:itemImage2 style:UIBarButtonItemStylePlain target:self action:@selector(rightClick:)];
+    item2.tag = 200;
+
+    self.navigationItem.rightBarButtonItems = @[item2, item];
 }
-*/
+#pragma mark - private-tools methords
+- (void)initData
+{
+
+}
+#pragma mark - property-setter-getter
+
+
+#pragma mark - event methords
+-(void)rightClick:(UIBarButtonItem*)sender
+{
+    
+}
+
+#pragma mark - delegate methords
 
 @end

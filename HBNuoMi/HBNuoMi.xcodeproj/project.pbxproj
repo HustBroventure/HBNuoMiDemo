@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A371F3C1BEBA5AF00BC075B /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A371F3B1BEBA5AF00BC075B /* MeViewController.m */; };
+		0A371F411BEBA9F000BC075B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A371F401BEBA9F000BC075B /* HomeViewController.m */; };
+		0A371F441BEBAA5E00BC075B /* NearByViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A371F431BEBAA5E00BC075B /* NearByViewController.m */; };
+		0A371F471BEBAA7900BC075B /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A371F461BEBAA7900BC075B /* SelectionViewController.m */; };
 		0A67878A1BEB111B00738772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6787891BEB111B00738772 /* main.m */; };
 		0A67878D1BEB111B00738772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A67878C1BEB111B00738772 /* AppDelegate.m */; };
 		0A67878F1BEB111B00738772 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A67878E1BEB111B00738772 /* Images.xcassets */; };
@@ -78,6 +82,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A371F3A1BEBA5AF00BC075B /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = SOURCE_ROOT; };
+		0A371F3B1BEBA5AF00BC075B /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = SOURCE_ROOT; };
+		0A371F3F1BEBA9F000BC075B /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = SOURCE_ROOT; };
+		0A371F401BEBA9F000BC075B /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = SOURCE_ROOT; };
+		0A371F421BEBAA5E00BC075B /* NearByViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearByViewController.h; sourceTree = SOURCE_ROOT; };
+		0A371F431BEBAA5E00BC075B /* NearByViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearByViewController.m; sourceTree = SOURCE_ROOT; };
+		0A371F451BEBAA7900BC075B /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = SOURCE_ROOT; };
+		0A371F461BEBAA7900BC075B /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = SOURCE_ROOT; };
 		0A6787841BEB111B00738772 /* HBNuoMi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBNuoMi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6787881BEB111B00738772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A6787891BEB111B00738772 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -223,6 +235,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A371F381BEBA55500BC075B /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				0A371F3F1BEBA9F000BC075B /* HomeViewController.h */,
+				0A371F401BEBA9F000BC075B /* HomeViewController.m */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		0A371F391BEBA56800BC075B /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				0A371F3A1BEBA5AF00BC075B /* MeViewController.h */,
+				0A371F3B1BEBA5AF00BC075B /* MeViewController.m */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
+		0A371F3D1BEBA9B300BC075B /* 附近 */ = {
+			isa = PBXGroup;
+			children = (
+				0A371F421BEBAA5E00BC075B /* NearByViewController.h */,
+				0A371F431BEBAA5E00BC075B /* NearByViewController.m */,
+			);
+			name = "附近";
+			sourceTree = "<group>";
+		};
+		0A371F3E1BEBA9BB00BC075B /* 精选 */ = {
+			isa = PBXGroup;
+			children = (
+				0A371F451BEBAA7900BC075B /* SelectionViewController.h */,
+				0A371F461BEBAA7900BC075B /* SelectionViewController.m */,
+			);
+			name = "精选";
+			sourceTree = "<group>";
+		};
 		0A67877B1BEB111B00738772 = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +336,10 @@
 		0A6787A71BEB49B000738772 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0A371F381BEBA55500BC075B /* 首页 */,
+				0A371F3D1BEBA9B300BC075B /* 附近 */,
+				0A371F3E1BEBA9BB00BC075B /* 精选 */,
+				0A371F391BEBA56800BC075B /* 我的 */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -713,6 +765,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A371F471BEBAA7900BC075B /* SelectionViewController.m in Sources */,
 				0A6788601BEB4C8400738772 /* IQKeyboardManager.m in Sources */,
 				0A6788611BEB4C8400738772 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				0A67888B1BEB4C8400738772 /* UIImageView+WebCache.m in Sources */,
@@ -735,6 +788,7 @@
 				0A6788721BEB4C8400738772 /* MBProgressHUD+HM.m in Sources */,
 				0A6788981BEB4DE600738772 /* HBNavigationController.m in Sources */,
 				0A67885D1BEB4C8400738772 /* IQNSArray+Sort.m in Sources */,
+				0A371F3C1BEBA5AF00BC075B /* MeViewController.m in Sources */,
 				0A6787BC1BEB4C6F00738772 /* HBActionSheet.m in Sources */,
 				0A6788661BEB4C8400738772 /* IQToolbar.m in Sources */,
 				0A6788881BEB4C8400738772 /* UIImage+MultiFormat.m in Sources */,
@@ -759,11 +813,13 @@
 				0A67887E1BEB4C8400738772 /* NSData+ImageContentType.m in Sources */,
 				0A6788A31BEB4F2000738772 /* HBBaseModel.m in Sources */,
 				0A6788861BEB4C8400738772 /* UIButton+WebCache.m in Sources */,
+				0A371F441BEBAA5E00BC075B /* NearByViewController.m in Sources */,
 				0A6788631BEB4C8400738772 /* IQTextView.m in Sources */,
 				0A6788691BEB4C8400738772 /* MASCompositeConstraint.m in Sources */,
 				0A6788821BEB4C8400738772 /* SDWebImageDownloader.m in Sources */,
 				0A67886D1BEB4C8400738772 /* MASViewAttribute.m in Sources */,
 				0A67885E1BEB4C8400738772 /* IQUIView+Hierarchy.m in Sources */,
+				0A371F411BEBA9F000BC075B /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

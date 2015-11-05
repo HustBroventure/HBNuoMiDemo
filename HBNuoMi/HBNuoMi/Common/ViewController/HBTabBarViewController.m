@@ -8,6 +8,10 @@
 
 #import "HBTabBarViewController.h"
 #import "HBNavigationController.h"
+#import "MeViewController.h"
+#import "SelectionViewController.h"
+#import "NearByViewController.h"
+#import "HomeViewController.h"
 @interface HBTabBarViewController ()
 
 @end
@@ -24,10 +28,10 @@
 -(void)configTabBar
 {
    
-    HBNavigationController* baseNavi_0 = [[HBNavigationController alloc]initWithRootViewController:[UIViewController new]];
-    HBNavigationController* baseNavi_1 = [[HBNavigationController alloc]initWithRootViewController:[UIViewController new]];
-    HBNavigationController* baseNavi_2 = [[HBNavigationController alloc]initWithRootViewController:[UIViewController new]];
-    HBNavigationController* baseNavi_3 = [[HBNavigationController alloc]initWithRootViewController:[UIViewController new]];
+    HBNavigationController* baseNavi_0 = [[HBNavigationController alloc]initWithRootViewController:[HomeViewController new]];
+    HBNavigationController* baseNavi_1 = [[HBNavigationController alloc]initWithRootViewController:[NearByViewController new]];
+    HBNavigationController* baseNavi_2 = [[HBNavigationController alloc]initWithRootViewController:[SelectionViewController new]];
+    HBNavigationController* baseNavi_3 = [[HBNavigationController alloc]initWithRootViewController:[MeViewController new]];
 
     self.viewControllers = @[baseNavi_0,baseNavi_1,baseNavi_2,baseNavi_3];
     UITabBarItem* item_0 = self.tabBar.items[0];
@@ -49,7 +53,7 @@
     item_3.title = @"我的";
     item_3.image = [[UIImage imageNamed:@"icon_tab_wode_normal"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item_3.selectedImage = [[UIImage imageNamed:@"icon_tab_wode_highlight"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    self.tabBar.tintColor = [UIColor colorWithRed:1 green:70.0/255 blue:131.0/255 alpha:1];
+    self.tabBar.tintColor = BASE_STYLE_COLOR;
 
 
     

@@ -23,4 +23,6 @@
     //#pragma mark - -  全局import
 #import <UIKit/UIKit.h>
 #import "HBBaseConfig.h"
+#import "HBBaseViewController.h"
+
 #endif
