@@ -21,6 +21,8 @@
     self.title = @"首页";
     [self addRightBarItemWith:@"icon_nav_saoyisao_normal"];
     [self initBar];
+    [self initSubView];
+           
 
 }
 
@@ -36,23 +38,40 @@
 #pragma mark - private-tools methords
 - (void)initBar
 {
+     
     UIBarButtonItem* leftItemArea = [[UIBarButtonItem alloc]initWithTitle:@"深圳" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = BASE_STYLE_COLOR;
-    UIBarButtonItem* arrowItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_nav_quxiao_normal"] style:UIBarButtonItemStylePlain target:nil action:nil];
+  
+    UIBarButtonItem* arrowItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_nav_quxiao_normal"] style:UIBarButtonItemStylePlain target:self action:@selector(barItemClick:)];
 
     self.navigationItem.leftBarButtonItems = @[leftItemArea,arrowItem];
 
-
     UISearchBar* searchBar = [[UISearchBar alloc]init];
     searchBar.placeholder = @"搜索商家或地点" ;
-    self.navigationController.navigationBar.topItem.titleView = searchBar;
+        // self.navigationController.navigationBar.topItem.titleView =
+    self.navigationItem.titleView =  searchBar;
 
+    BOOL b = [self.navigationItem isEqual:self.navigationController.navigationBar.topItem];
+    ECLog(@"%d",b);
+
+    
+
+}
+-(void)initSubView
+{
+//    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    button setTitle:@"跳转" forState:UIControlStateNormal
 }
 #pragma mark - property-setter-getter
 
 
 #pragma mark - event methords
-
+-(void)barItemClick:(UIBarButtonItem*)sender
+{
+    UIViewController* vc = [UIViewController new];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.view.backgroundColor = [UIColor redColor];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark - delegate methords
 

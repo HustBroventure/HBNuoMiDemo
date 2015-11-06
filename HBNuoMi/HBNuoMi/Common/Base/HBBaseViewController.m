@@ -18,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -42,7 +42,13 @@
     UIBarButtonItem* item2 = [[UIBarButtonItem alloc]initWithImage:itemImage2 style:UIBarButtonItemStylePlain target:self action:@selector(rightClick:)];
     item2.tag = 200;
 
-    self.navigationItem.rightBarButtonItems = @[item2, item];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil action:nil];
+    negativeSpacer.width = -10;
+
+   
+    self.navigationItem.rightBarButtonItems = @[negativeSpacer,item2, negativeSpacer,item];
 }
 #pragma mark - private-tools methords
 - (void)initData
