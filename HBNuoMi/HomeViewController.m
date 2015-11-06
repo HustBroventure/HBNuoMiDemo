@@ -7,12 +7,17 @@
 //
 
 #import "HomeViewController.h"
-
-@interface HomeViewController ()
-
+#import "HBCycleImageView.h"
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, strong) UIView* topHeadView;
+@property (nonatomic, strong) HBCycleImageView* cycleImageView;
+ 
+ 
+ 
 @end
 
 @implementation HomeViewController
+
 
 #pragma mark - vc-life-circle
 - (void)viewDidLoad
@@ -58,12 +63,28 @@
 }
 -(void)initSubView
 {
-//    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    button setTitle:@"跳转" forState:UIControlStateNormal
+    self.tableView.tableHeaderView = self.topHeadView;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
 }
 #pragma mark - property-setter-getter
+-(UIView *)topHeadView
+{
+    if (!_topHeadView) {
+        _topHeadView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+        
+    }
+    return _topHeadView;
+}
+-(HBCycleImageView *)cycleImageView
+{
+    if (!_cycleImageView) {
+        _cycleImageView = [[HBCycleImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
 
-
+    }
+    return _cycleImageView;
+}
 #pragma mark - event methords
 -(void)barItemClick:(UIBarButtonItem*)sender
 {
@@ -74,5 +95,23 @@
 }
 
 #pragma mark - delegate methords
-
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 25;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CELL"];
+    }
+    cell.textLabel.text = @"测试一下";
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
 @end

@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 HustBroventure. All rights reserved.
 //
 
-#import "HBBaseViewController.h"
+#import "HBTableViewController.h"
 
-@interface HomeViewController : HBBaseViewController
+@interface HomeViewController : HBTableViewController
 
 @end
